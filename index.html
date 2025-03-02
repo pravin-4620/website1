@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        body{
+            padding: 0%;
+            margin: 0%;
+        }
+        .section1,.section2{
+            height: 100vh; /* Full viewport height */
+            background-image: url("moving_dots.gif");
+            background-size: cover;  
+            background-repeat: no-repeat;
+            animation: moveBackground 30s linear infinite;
+        }
+        .ExploitX{
+            font-family: HACKED;
+            color: white;
+
+        }
+        .kprlogo,.dept{
+            margin: 50px 50px;
+        }
+        .dept{
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+        }
+        .imageheader{
+            justify-content: space-between;
+            display: flex;
+        }
+        .nationalbox{
+            display: flex;
+            flex-direction: column;
+            margin-left: 4%;
+            text-align: center;
+            justify-content: space-between;
+            padding: 20px, 0px;
+        }
+        .nationalbox img{
+            padding:10px;
+        }
+        .glitch_text{
+            width: 70%;
+        }
+        .pricepool{
+            display: flex;
+            flex-direction: column;
+            height: 300px;
+            padding-top: 30px;
+        }
+        .pricepoolcontainer{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 50px;
+        }
+        .page1bottom{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 0px;
+            
+        }
+        .graph-image{
+            margin-top: 80px;
+            width: 60vw;
+        }
+        .page2header{
+            display: flex;
+            flex-direction: row;
+            padding-top: 100px;
+            justify-content: space-around;
+        }
+        .page2right{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .sponsors{
+            display: flex;
+            flex-direction: row;
+            justify-content:left;
+            padding-left: 130px;
+            padding-top: 100px;
+        }
+        .sponsors-names{
+            display: flex;
+            justify-content: space-around;
+            padding: 60px 120px;
+        }
+        .sponsor-back{
+            background-image: url("Rectangle\ 40.png");
+            width: 300px;
+            padding: 20px;
+            border-radius: 20px;
+            text-align: center;
+            align-content: center;
+            
+        }
+        .page3box1{
+            padding: 0px 40px;
+            
+            text-align: center;
+            
+            border-radius: 20px;
+        }
+        .page3row{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin: 40px;
+        }
+        .page3hed{
+            display: flex;
+            padding-top: 100px;
+            padding-left: 130px;
+        }
+        .regisbut{
+            display: flex;
+            justify-content:center;
+            margin-top: 100px;
+        }
+        .whocanjoin{
+            padding: 60px 40px;
+            display: flex;
+            justify-content: space-around;
+            background:linear-gradient(to right,grey,white);
+        }
+        .whocanjoinbox1{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        .whocanjoinbox2{
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+        }
+        .footer-section{
+            background-color:rgb(9, 9, 37);
+            margin-top: 200px;
+        }
+        .footerrow1{
+            display: flex;
+            justify-content:center;
+        }
+        .hacker-image{
+            display: flex;
+            justify-content: space-between;
+        }
+        .footerrow2{
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        .footercontact{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .footerlist{
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        .footerlistpoints{
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 100px;
+            justify-content: space-around;
+            padding-left: 300px;
+            text-align: left;
+        }
+        .footerrow3{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            margin-left: 100px;
+        }
+        .timerpage{
+            display: flex;
+            flex-direction: column;
+            padding: 40px;
+        }
+        .timer{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .timerrow2{
+            margin-top: 30px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        .timerregister{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding: 100px 50px;
+        }
+        hr{
+            height: 3px;
+            background-color: white;
+            border:none;
+        }
+        .logolinksection{
+            display: flex;
+            justify-content: space-around;
+        }
+        .logolink{
+            border-radius: 25px;
+            padding: 20px 30px;
+        }
+        .countdown-container {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+
+.countdown-item {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    text-align: center;
+}
+
+.countdown-item svg {
+    width: 250px;
+    height: 250px;
+    transform: rotate(-90deg);
+}
+
+.bg-circle {
+    fill: none;
+    stroke: #16213e;
+    stroke-width: 10;
+}
+
+.progress-circle {
+    fill: none;
+    stroke: #99ed1a;
+    stroke-width: 10;
+    stroke-dasharray: 690; /* Full circumference */
+    stroke-dashoffset: 0;
+    transition: stroke-dashoffset 0.5s linear;
+    stroke-linecap: round;
+}
+
+.countdown-value {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    font-weight: bold;
+    color: black;
+}
+
+.countdown-label {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+}
+.glitch_text{
+    /* size: 500px; */
+    width: 100%;
+    height: auto;
+}
+.calender{
+    border-radius: 20px;
+}
+
+/* Add these responsive styles at the end of your existing styles */
+@media screen and (max-width: 1200px) {
+    .page1bottom {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .graph-image {
+        width: 90vw;
+        margin-top: 20px;
+    }
+
+    .sponsors-names {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .page2header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .page3row {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .page3box1 {
+        flex: 0 0 45%;
+    }
+
+    .countdown-container {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .countdown-item {
+        width: 200px;
+        height: 200px;
+    }
+
+    .countdown-item svg {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+/* Mobile-specific styles */
+@media screen and (max-width: 768px) {
+    /* Global adjustments */
+    body {
+        overflow-x: hidden;
+    }
+    
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /* Header section */
+    .imageheader {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .kprlogo, .dept {
+        margin: 15px;
+        text-align: center;
+    }
+    
+    /* National box */
+    .nationalbox {
+        margin: 0 auto;
+        padding: 10px;
+        width: 100%;
+    }
+    
+    .glitch_text {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    /* Price pool section */
+    .page1bottom {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .pricepoolcontainer {
+        margin: 10px;
+        width: 100%;
+    }
+    
+    .pricepool {
+        height: auto;
+        padding-top: 10px;
+    }
+    
+    /* Hide graph image on mobile */
+    .graph-image {
+        display: none;
+    }
+    
+    /* About section */
+    .page2header {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 30px;
+    }
+    
+    .page2right {
+        text-align: center;
+        padding: 15px;
+    }
+    
+    /* Sponsors section */
+    .sponsors {
+        padding-left: 0;
+        justify-content: center;
+        padding-top: 30px;
+    }
+    
+    .sponsors-names {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+    }
+    
+    /* Countdown timer */
+    .countdown-container {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .countdown-item {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .countdown-item svg {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .countdown-value {
+        font-size: 1.5rem;
+    }
+    
+    .countdown-label {
+        font-size: 0.7rem;
+        bottom: -20px;
+    }
+    
+    .timerregister {
+        padding: 30px 10px;
+    }
+    
+    /* Who can join section */
+    .whocanjoin {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+    
+    /* Why join section */
+    .page3hed {
+        padding-left: 0;
+        padding-top: 50px;
+        justify-content: center;
+    }
+    
+    .page3row {
+        flex-direction: column;
+        align-items: center;
+        margin: 20px 10px;
+    }
+    
+    .page3box1 {
+        margin-bottom: 30px;
+        padding: 0 10px;
+    }
+    
+    /* Footer section */
+    .footer-section {
+        margin-top: 50px;
+    }
+    
+    .footerrow2 {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .footercontact, .footerlist {
+        height: auto !important;
+        padding: 15px;
+    }
+    
+    .footerlistpoints {
+        padding-left: 0;
+        padding-bottom: 30px;
+        align-items: center;
+    }
+    
+    .quicklinks {
+        padding-left: 0;
+    }
+    
+    .footerrow3 {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+        gap: 15px;
+    }
+    
+    .logolinksection {
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .logolink {
+        padding: 10px;
+    }
+}
+
+/* Extra small devices */
+@media screen and (max-width: 480px) {
+    .countdown-item {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .countdown-item svg {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .countdown-value {
+        font-size: 1rem;
+    }
+    
+    .countdown-label {
+        font-size: 0.6rem;
+        bottom: -15px;
+    }
+    
+    #moveToTopBtn {
+        bottom: 10px;
+        right: 10px;
+        font-size: 30px;
+        padding: 8px;
+    }
+    
+    .section1, .section2 {
+        min-height: 100vh;
+        height: auto;
+        padding: 10px;
+    }
+}
+#moveToTopBtn {
+            display: none; /* Hidden by default */
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            font-size: 40px; /* Increased font size */
+            border: none;
+            outline: none;
+            background: none; /* Removed background color */
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 10px;
+            opacity: 0.7; /* Reduced transparency */
+        }
+        #moveToTopBtn:hover {
+            color: #555;
+            opacity: 1; /* Full opacity on hover */
+        }
+        /* Final state for elements */
+        .visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        @media (max-width: 768px) {
+            .footerlistpoints {
+                flex-direction: column;
+                align-items: center;
+            }
+            .logolinksection {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        .prizesimg{
+            padding-top: -50px;
+        }
+        .quicklinks{
+            padding-left: 150px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="section1" id="home">
+        <div class="imageheader">
+            <div class="kprlogo">
+                <img class="" src="LOGO.png" alt="kprlogo">
+            </div>
+            <div class="dept">
+                <img class="" src="text2.png" alt="dept">
+            </div>
+        </div>
+        <div class="national-container">
+            <div class="nationalbox">
+                <div>
+                    <img class="glitch-above" src="text1.png" alt="">
+                </div>
+                <div class="m-4">
+                    <img class="glitch_text" src="glitch_text.gif" alt="">
+                </div>
+                <div>
+                    <img class="glitch-above" src="text4.png" alt="">
+                </div>
+                
+            </div>
+        </div>
+        
+    
+        <div class="page1bottom">
+            <div class="pricepoolcontainer">
+                <div class="pricepool">
+                    <div class="m-2">
+                        <img class="calender" src="5 April - Sa.png" alt="">
+                    </div>
+                    <div class="m-2">
+                        <img src="Prizes Worth.png" alt="">
+                    </div>
+                    <div class="m-2">
+                        <img src="glitched_text_refined.gif" alt="">
+                    </div>
+                    <div class="m-2">
+                        <img src="./Registration Fee_ ₹550/per head.png" alt="">
+                    </div>
+                    <div class="m-2">
+                       <a href="https://www.youtube.com/"><img src="Group 1.png" alt=""></a> 
+                    </div>
+            </div>
+            </div>
+            <div>
+                <div >
+                    <img class="graph-image" src="animated_ctf.gif" alt="">
+                </div>  
+            </div>
+            
+        </div>
+    </div>
+    
+    <div class="section2" id="page2header">
+        <div class="page2header">
+            <div class="header2hacker">
+                <img src="pngwing.com (5) 1.png" alt="">
+            </div>
+            <div class="page2right">
+                <div>
+                    <img src="About this _/Event_.png" alt="">
+                </div>
+                <div>
+                    <img src="Welcome to KPR CTF Challenge 2025, South India’s first standalone offline national-level Capture the Flag (CTF) cybersecurity competition! Hosted by KPR Institute of Engineering and Technology, in collaboration with top industry leaders like EC C.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="sponsors">
+            <div>
+                <img src="oUR /SPONSORS.png" alt="">
+            </div>
+        </div>
+        <div class="sponsors-names">
+            <div class="sponsor-back">
+                <a href="https://www.eccouncil.org/"><img src="Ec_Council_Logo.png" alt=""></a>
+            </div>
+            <div class="sponsor-back">
+                <a href="https://www.sparkouttech.com/"><img src="twitter-card 1.png" alt=""></a>
+            </div>
+            <div class="sponsor-back">
+                <a href="https://www.hackuptechnology.com/"><img src="htlogofooter (1) 1.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+   
+
+    <div class="timerpage">
+        <div class="m-4">
+            <img src="page3/PUT YOUR SKILLS _/ON THE TEST_.png" alt="">
+        </div>
+        <div class="timerrow2">
+            <div class="countdown-container">
+                <div class="countdown-item">
+                    <svg viewBox="0 0 250 250">
+                        <circle cx="125" cy="125" r="110" class="bg-circle" />
+                        <circle cx="125" cy="125" r="110" class="progress-circle" id="days-circle" />
+                    </svg>
+                    <div class="countdown-value" id="days">30</div>
+                    <div class="countdown-label">DAYS</div>
+                </div>
+                <div class="countdown-item">
+                    <svg viewBox="0 0 250 250">
+                        <circle cx="125" cy="125" r="110" class="bg-circle" />
+                        <circle cx="125" cy="125" r="110" class="progress-circle" id="hours-circle" />
+                    </svg>
+                    <div class="countdown-value" id="hours">12</div>
+                    <div class="countdown-label">HOURS</div>
+                </div>
+                <div class="countdown-item">
+                    <svg viewBox="0 0 250 250">
+                        <circle cx="125" cy="125" r="110" class="bg-circle" />
+                        <circle cx="125" cy="125" r="110" class="progress-circle" id="minutes-circle" />
+                    </svg>
+                    <div class="countdown-value" id="minutes">45</div>
+                    <div class="countdown-label">MINUTES</div>
+                </div>
+                <div class="countdown-item">
+                    <svg viewBox="0 0 250 250">
+                        <circle cx="125" cy="125" r="110" class="bg-circle" />
+                        <circle cx="125" cy="125" r="110" class="progress-circle" id="seconds-circle" />
+                    </svg>
+                    <div class="countdown-value" id="seconds">37</div>
+                    <div class="countdown-label">SECONDS</div>
+                </div>
+            </div>
+            <div class="timerregister">
+                <div class="m-5">
+                    
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScVSUhucZKfXuOibkgSL1j0131QGC1Tawd63XTS-kNKmtt76g/viewform?usp=dialog"><img src="page3/Group 28.png" alt=""></a>
+                </div>
+                <div>
+                    <img src="page3/DON”T HESITATE TO JOIN US 5 April 2K25 - Saturday.png" alt="">
+                </div>
+            </div>  
+        </div>
+    </div>
+    
+
+    <div class="whocanjoin" id="whocanjoin">
+        <div class="whocanjoinbox1">
+            <div>
+                <img src="foorter/WhO CAN JOIN _/THE CTF_.png" alt="">
+            </div>
+            <div><img src="foorter/This CTF is for all infosec beginners, cybersecurity enthusiasts, and anyone eager to test their skills while saving the planet. The competition is open to students. Teams must have 2 to 4 members. Any form of cheating, collusion, or unethical beha.png" alt=""></div>    
+        </div>
+        <div class="whocanjoinbox2">
+            <div>
+                <img src="foorter/WhO CAN JOIN _/Layer 1DF 1.png" alt="">
+            </div>  
+        </div>
+    </div>
+
+
+    <div class="page3hed">
+        <img src="page3/Why _/JOIN__.png" alt="">
+    </div>
+    <div class="page3row">
+        <div class="page3box1">
+            <div class="m-4"><img src="page3/Group 30.png" alt=""></div>
+            <div class="m-4"><img src="page3/Hack. Hack. Hack..png" alt=""></div>
+            <div><img src="page3/Top-notch hacking content created by CSE, KPRIET customized for the event..png" alt=""></div>
+        </div>
+        <div class="page3box1">
+            <div class="m-4"><img src="page3/Vector-1.png" alt=""></div>
+            <div class="m-4"><img src="page3/Devine Prizes.png" alt=""></div>
+            <div><img src="page3/Win the biggest and most exclusive prizes ever!.png" alt=""></div>
+        </div>
+        <div class="page3box1">
+            <div class="m-4"><img src="page3/Vector-2.png" alt=""></div>
+            <div class="m-4"><img src="page3/Community Party.png" alt=""></div>
+            <div><img src="page3/Meet the most fun, skilled, and interactive hacking community. Become one of us and have fun while learning!.png" alt=""></div>
+        </div>
+        <div class="page3box1">
+            <div class="m-4"><img src="page3/Vector.png" alt=""></div>
+            <div class="m-4"><img src="page3/Be The Champion.png" alt=""></div>
+            <div><img src="page3/Are you ready to achieve eternal glory_ If yes, then charge your batteries and get ready for scoreboard domination!.png" alt=""></div>
+        </div>
+    </div>
+    <div class="regisbut">
+        <a href="https://cloudinary.com/tools/image-to-gif"><img src="page3/Group 27.png" alt=""></a>
+    </div>
+
+
+
+   
+
+
+
+
+
+    <div class="footer-section">
+        <div class="footerrow1" style="text-align: left;">
+            <div class="prizesimg">
+                <img src="foorter/Group 36.png" alt="">
+            </div>
+        </div>
+        <div class="footerrow2 p-5">
+            <div class="footercontact" style=" height: 300px;flex: 1;">
+                <div>
+                    <img src="foorter/Ready to Crack. Track. Conquer..png" alt="">
+                </div>
+                <div>
+                    <img src="foorter/Group 18.png" alt="">
+                </div>
+                <div>
+                    <img style="padding-right: 5px;" src="foorter/Vector.png" alt="">
+                    <img src="foorter/CyberSiege_CTF@kpriet.ac.in.png" alt="">
+                </div>
+            </div>
+            <div style="height: 300px; flex: 1;">
+                <div style="text-align:center;">
+                    <img src="foorter/Logo Variation-updated-27 1.png" alt="">
+                    <img src="foorter/KPR Institute of Engineering and Technology.png" alt="">
+                    <img src="foorter/Avinashi Road, Uthupalayam, Tamil Nadu 641 407.png" alt="">
+                </div>
+            </div>
+            <div class="footerlist" style="height: 300px;flex: 1;">
+                <div class="quicklinks" style="text-align:center;">
+                    <img class="m-4" src="foorter/Quick Links.png" alt="">
+                </div>
+                <div>
+                    <ul class="footerlistpoints" style="list-style-type: none;">
+                        <li><a href="#home"><img class="m-2" src="foorter/WhO CAN JOIN _/Home.png" alt=""></a></li>
+                        <li><a href="#page2header"><img class="m-2" src="foorter/WhO CAN JOIN _/About this Event.png" alt=""></a></li>
+                        <li><a href="#whocanjoin"><img class="m-2" src="foorter/WhO CAN JOIN _/who can join.png" alt=""></a></li>
+                        <li><img class="m-2" src="foorter/WhO CAN JOIN _/Register Now.png" alt=""></li>
+                    </ul>
+                </div>
+            </div>
+            <hr/>
+        </div>
+        <hr/>
+        <div class="footerrow3">
+            <div>
+                <img src="foorter/WhO CAN JOIN _/© 2025 - CyberSiege CTF.png" alt="">
+            </div>
+            <div>
+                <a href="https://www.kpriet.ac.in/"><img src="foorter/WhO CAN JOIN _/kpriet.edu.in.png" alt=""></a>
+            </div>
+            <div class="logolinksection">
+                <div class="logolink">
+                    <a href="https://www.instagram.com/kprietonline/?hl=en">
+                        <svg style="color: white;" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                          </svg>
+                    </a>
+                </div>
+                <div class="logolink">
+                    <a href="https://in.linkedin.com/school/kprietonline/"><svg style="color: white;" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+                      </svg></a>
+                </div>
+                <div class="logolink">
+                    <a href="https://www.facebook.com/KPRIETonline/"><svg  style="color: white;" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                      </svg></a>
+                </div>
+                <div class="logolink">
+                    <a href="https://twitter.com/KPRIETonline?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><svg style="color: white;" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+                        <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+                      </svg></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<button onclick="topFunction()" id="moveToTopBtn" title="Go to top">⬆</button>
+<script>
+    // Get the button
+    var mybutton = document.getElementById("moveToTopBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+
+    // Intersection Observer to add 'visible' class when elements come into view
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    });
+
+    // Observe all elements with the 'hidden' class
+    document.querySelectorAll('.hidden').forEach(element => {
+        observer.observe(element);
+    });
+</script>
+
+    <script>
+        // Set the countdown target to April 5th, 2025, at 00:00:00 UTC
+let countDownDate = new Date("2025-04-05T00:00:00Z").getTime();
+
+function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = countDownDate - now;
+
+    if (distance < 0) {
+        clearInterval(interval);
+        document.getElementById("days").innerHTML = "00";
+        document.getElementById("hours").innerHTML = "00";
+        document.getElementById("minutes").innerHTML = "00";
+        document.getElementById("seconds").innerHTML = "00";
+        return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
+    document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
+    document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
+    document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
+
+    updateCircleProgress("days-circle", days, 30);
+    updateCircleProgress("hours-circle", hours, 24);
+    updateCircleProgress("minutes-circle", minutes, 60);
+    updateCircleProgress("seconds-circle", seconds, 60);
+}
+
+function updateCircleProgress(id, value, maxValue) {
+    const circle = document.getElementById(id);
+    const circumference = 690;  // Full circumference of the circle
+    const offset = (1 - value / maxValue) * circumference; // Reverse direction (anti-clockwise)
+    circle.style.strokeDashoffset = offset;
+}
+
+const interval = setInterval(updateCountdown, 1000);
+updateCountdown();
+
+    </script>
+</body>
+</html>
